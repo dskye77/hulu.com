@@ -1059,7 +1059,7 @@ footer .links-other .terms p {
     display: flex;
   }
   .head-content1 {
-    padding: 15px 20px;
+    padding: 15px 0px;
   }
   .head-content3 {
     flex-direction: column;
