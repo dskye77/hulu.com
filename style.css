@@ -1,0 +1,1268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.sign-up-now {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  z-index: 9999;
+  background-color: #1ce783;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  padding: 15px 30px;
+  font-size: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.sign-up-now.hide {
+  bottom: -100px;
+}
+.sign-up-now:hover {
+  background-color: #17b96a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.sign-up-now-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 9998;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
+  background-image: url("img/main-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 200px 100px -100px rgba(0, 0, 0, 0.8);
+}
+.head-content1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 45px;
+}
+
+.head-content1 p.hulu {
+  font-size: 1.8rem;
+  color: #1ce783;
+  font-weight: bold;
+}
+
+.head-content1 button {
+  background-color: #ffffff00;
+  color: #a6aab3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 600;
+}
+
+.head-content1 button:hover {
+  background-color: #ffffff42;
+}
+.head-content1 .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.head-content1 .hamburger img {
+  width: 100%;
+  height: 100%;
+}
+.head-content1 .menu {
+  display: none;
+}
+
+.head-content2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0 20px 0;
+  width: 100%;
+}
+
+.head-content2 .bundle1,
+.head-content2 .bundle2 {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+  padding: 24px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 260px;
+  max-width: 320px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.head-content2 p {
+  color: #1ce783;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.head-content2 p.pricing {
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.head-content2 img {
+  width: 200px;
+}
+
+.head-content2 .bundle-img2 {
+  width: 262px;
+}
+
+.head-content2 button {
+  background-color: #1ce783;
+  width: 100%;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.head-content2 button:hover {
+  background-color: #17b96a;
+}
+
+.head-content2 a {
+  color: #ffffff;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  margin-top: 6px;
+}
+
+.head-content3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #113c3c 60%, #0b2020 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 32px 40px 24px 40px;
+  min-height: 140px;
+}
+
+.head-content3 img {
+  width: 160px;
+  margin-left: 60px;
+}
+
+.head-content3 .bundle3-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  max-width: 45%;
+  gap: 12px;
+}
+
+.head-content3 h2 {
+  color: #1ce783;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.head-content3 h2.mobile {
+  display: none;
+}
+
+.head-content3 p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.head-content3 a {
+  color: #b6c2c5;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.head-content3 > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 180px;
+}
+
+.head-content3 .get-all-three {
+  background-color: #1ce783;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 4px;
+  margin-top: 0;
+  transition: background 0.2s;
+}
+
+.head-content3 .get-all-three:hover {
+  background-color: #17b96a;
+}
+
+.head-content3 > div:last-child a {
+  color: #b6c2c5;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  margin-top: 0px;
+  text-align: center;
+}
+
+main {
+  background-color: #0b0c0f;
+  color: #ffffff;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.main-content h3 {
+  color: #1ce783;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+.main-card {
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 4px;
+  border-radius: 8px 12px;
+  border: 5px solid rgba(128, 128, 128, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.main-card:hover {
+  border: 5px solid gray;
+}
+
+.main-card img {
+  width: 100%;
+  border-radius: 8px;
+  filter: brightness(70%);
+}
+
+.main-card .card-info {
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.main-card .card-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.main-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-content .info {
+  color: #b6c2c5;
+  font-size: 0.7rem;
+  grid-column: 4 / span 1;
+}
+
+.trial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  margin: 88px auto 50px auto;
+  width: 100%;
+  gap: 10px;
+}
+
+.trial-content h3 {
+  color: #1ce783;
+  font-size: 0.88rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.trial-content h1 {
+  font-size: 2.9rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.trial-content p {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.trial-content .start-trial {
+  background-color: #1ce783;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 48px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 12px;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.trial-content .start-trial:hover {
+  background-color: #17b96a;
+}
+
+.trial-content span {
+  color: #b6c2c5;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.trial-content span a {
+  color: #b6c2c5;
+}
+
+.trial-content a.view-all {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.sports-content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  padding: 200px 140px 220px 140px;
+  width: 100%;
+  height: 760px;
+  gap: 35px;
+  background-image: url(img/live-sport-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sports-content nav {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.sports-content nav li {
+  list-style: none;
+  color: #b6c2c5;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.sports-content nav li:first-child {
+  color: #fff;
+}
+
+.sports-content nav li:hover {
+  color: #747c7e;
+}
+
+.sports-content nav li:first-child:hover {
+  color: #fff;
+}
+
+.sports-content .sport-info {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  gap: 20px;
+}
+
+.sports-content h1 {
+  font-size: 2.9rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sports-content p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  line-height: 1.5;
+  font-weight: 550;
+}
+
+.sports-content .sport-info .sport-icons {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 30px;
+}
+
+.sports-content .sport-info .sport-icon {
+  padding: 20px;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.sports-content .sport-info .sport-icons img {
+  width: 40px;
+}
+
+.sports-content .sport-info .add-details {
+  color: #b6c2c5;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.sports-content .sport-info .add-details a {
+  color: #b6c2c5;
+  text-decoration: underline;
+}
+.plans-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 90%;
+  max-width: 1000px;
+  padding-bottom: 0px;
+}
+
+.plans-content .plans-content1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
+.plans-content .plans-content1 .plans-plans {
+  display: none;
+}
+.plans-content .plans-content1 #plan-toggle.active ~ .plans-plans {
+  position: absolute;
+  top: 250px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  color: #000;
+  width: max-content;
+  box-shadow: 0 4px 16px 10px rgba(0, 0, 0, 0.6);
+}
+.plans-content .plans-content1 .plans-plans p {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 550;
+  text-align: left;
+  margin: 0;
+  letter-spacing: normal;
+  width: 130px;
+}
+.plans-content .plans-content1 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.plans-content .plans-content1 p {
+  font-size: 1rem;
+  max-width: 800px;
+  line-height: 1.5;
+}
+.plans-content .plans-content1 button {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.plans-content .plans-content2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 30px;
+}
+.plans-content .plans-content2 .plan1,
+.plans-content .plans-content2 .plan2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  grid-column: 2 / span 1;
+}
+.plans-content .plans-content2 .plan2 {
+  grid-column: 3 / span 1;
+}
+.plans-content .plans-content2 .plan1 img,
+.plans-content .plans-content2 .plan2 img {
+  width: 100%;
+  max-width: 130px;
+  border-radius: 12px;
+}
+.plans-content .plans-content2 .plan1 b,
+.plans-content .plans-content2 .plan2 b {
+  font-size: 0.75rem;
+  color: #fff;
+}
+.plans-content .plans-content2 .plan1 button,
+.plans-content .plans-content2 .plan2 button {
+  background-color: #ffffff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.plans-content .plans-content2 {
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  border-bottom: 1px solid #b6c2c5;
+  z-index: 10;
+  background-color: #0b0c0f;
+}
+.plans-content .plans-content2 .plan1 span,
+.plans-content .plans-content2 .plan2 span {
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  letter-spacing: 0.75px;
+  color: #b6c2c5;
+}
+.plans-content3 {
+  width: 100%;
+  grid-column: 1 / span 3;
+}
+.plans-content3 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0px;
+  border-bottom: 1px solid #b6c2c5;
+}
+.plans-content3 div p {
+  color: #ffffff;
+  width: 100%;
+}
+.plans-content3 div p.plan-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.plans-content3 div span.init {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b6c2c5;
+  text-decoration: line-through;
+}
+.plans-content3 div .two-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.plans-content3 div .plan-title button {
+  background-color: #ffffff00;
+  border: none;
+}
+.plans-content3 div .plan-title button img {
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: middle;
+}
+.plans-content3 div .plan-get {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+.plans-content3 div span.midline {
+  display: none;
+}
+.plans-content3 div.plan-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-bottom: none;
+  padding: 0;
+  gap: 0;
+}
+.plans-content3 div.plan-extra span {
+  color: #e2e2e2;
+  font-size: 0.7rem;
+  text-align: left;
+  width: 100%;
+  margin-top: 3px;
+  font-weight: 600;
+  letter-spacing: 0.3;
+}
+.plans-content3 div.plan-extra span a {
+  color: #b6c2c5;
+  text-decoration: underline;
+}
+.plans-content3 div.plan-addons {
+  margin-top: 60px;
+  border-bottom: none;
+}
+.plans-content3 div.plan-addons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.plans-content3 div.plan-addons h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.plans-content3 .plan-addons-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0;
+  padding: 0;
+  border: none;
+}
+.plans-content3 .plan-addons-content div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0px;
+  border-bottom: 1px solid #b6c2c5;
+}
+.plans-content3 div.plan-addons-toggle {
+  padding: 0px;
+  gap: 0;
+  border-top: 1px solid #b6c2c5;
+}
+.plan-addons-toggle button {
+  width: 100%;
+  padding: 25px;
+  background-color: #ffffff00;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.plans-content3 div.plan-addons-toggle button img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.plans-content3 div.plan-addons {
+  overflow: hidden;
+  height: 0px;
+  padding: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.plans-content3 div.plan-addons-content {
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.3s ease-in-out;
+}
+.plans-content3 div.plan-addons.active {
+  height: auto;
+  padding: 20px 0px;
+}
+.plans-content3 div.plan-addons-content.active {
+  height: auto;
+  padding: 0px 0px;
+}
+
+footer {
+  background-color: #e8eaed;
+  padding: 40px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+footer .links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+footer .links .link-class {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .links .link-class-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 160px;
+}
+footer .links .link-class:first-child .link-class-item {
+  width: 140px;
+}
+footer .links .link-class-item p {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #586174;
+  letter-spacing: 1px;
+}
+footer .links .link-class p.link-class-head {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #272c34;
+}
+footer .links .link-class p.link-class-head img {
+  display: none;
+}
+footer .links .link-class:first-child {
+  grid-column: 1 / span 4;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .links .link-class:first-child p.link-class-head {
+  grid-column: 1 / span 4;
+}
+footer .links-other {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #b6c2c5;
+}
+footer .links-other .icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+footer .links-other .terms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 15px;
+}
+footer .links-other .terms p {
+  font-size: 0.75rem;
+  color: #586174;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .main-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-content .info {
+    grid-column: 2 / span 1;
+  }
+
+  .sports-content {
+    padding: 100px 40px 220px 40px;
+    gap: 100px;
+    background-image: url(img/live-sport-mobile-bg.jpeg);
+    background-position: 50% 85%;
+    border-radius: 0%;
+    height: 1350px;
+  }
+
+  .sports-content nav {
+    justify-content: center;
+  }
+
+  .sports-content nav li {
+    font-size: 1.1rem;
+  }
+
+  .sports-content .sport-info {
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .sports-content h1 {
+    font-size: 2.45rem;
+  }
+
+  .sports-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .sports-content .sport-info .sport-icons {
+    justify-content: center;
+  }
+
+  .sports-content .sport-info .sport-icons img {
+    width: 50px;
+  }
+
+  .sports-content .sport-info .add-details {
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  footer {
+    padding: 40px 40px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .head-content1 .hamburger {
+    display: flex;
+  }
+  .head-content1 button span {
+    display: none;
+  }
+  .head-content1 .login.active ~ .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 3px;
+    top: 80px;
+    right: 30px;
+    background-color: #272c34;
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  .head-content1 .menu button {
+    width: 100%;
+    padding: 15px;
+    color: #b6c2c5;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+  }
+  .head-content1 .menu button:hover {
+    background-color: #ffffff42;
+  }
+  .head-content1 .menu button:nth-child(2) {
+    color: black;
+    background-color: #17b96a;
+  }
+  .plans-content .plans-content2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .plans-content .plans-content2 .plan1 {
+    grid-column: 1 / span 1;
+  }
+  .plans-content .plans-content2 .plan2 {
+    grid-column: 2 / span 1;
+  }
+  .plans-content .plans-content3 div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .plans-content .plans-content3 div p {
+    width: 30%;
+  }
+  .plans-content .plans-content3 .plan-addons p {
+    width: 100%;
+    text-align: center;
+  }
+  .plans-content .plans-content3 div p.plan-title {
+    width: 100%;
+    text-align: center;
+  }
+  .plans-content3 div span.midline {
+    display: inline-block;
+    width: 1.5px;
+    height: 25px;
+    background-color: #b6c2c5;
+    margin: 0 10px;
+    align-self: flex-end;
+  }
+  .plans-content3 div.plan-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-bottom: none;
+    padding: 0;
+    gap: 0;
+  }
+  .plans-content3 div.plan-extra span {
+    color: #e2e2e2;
+    font-size: 0.65rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 3px;
+    font-weight: 600;
+    letter-spacing: 0.3;
+  }
+
+  footer .links {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  footer .links .link-class:first-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .head-content3 {
+    min-height: 200px;
+  }
+
+  main {
+    padding: 100px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sign-up-now-container {
+    display: flex;
+  }
+  .head-content1 {
+    padding: 15px 20px;
+  }
+  .head-content3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 210px;
+    gap: 10px;
+  }
+
+  .head-content3 img {
+    width: 150px;
+    margin-left: 0;
+  }
+
+  .head-content3 .bundle3-text {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .head-content3 h2 {
+    display: none;
+  }
+
+  .head-content3 h2.mobile {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .head-content3 p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .head-content3 p::after {
+    content: "What's Included?";
+    color: #b6c2c5;
+    text-decoration: underline;
+    margin-left: 8px;
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .head-content3 a.whats-included {
+    display: none;
+  }
+
+  main {
+    padding: 130px 0;
+  }
+
+  .trial-content {
+    padding: 0 20px;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+  }
+
+  .trial-content h1 {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .trial-content h3 {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .trial-content p {
+    margin: 0px 0px 0px 0px;
+    font-size: 0.9rem;
+  }
+
+  .trial-content button.start-trial {
+    margin: 0px 0px 0px 0px;
+  }
+  .sports-content {
+    background-position: top center;
+    background-size: cover;
+    padding: 50px 20px;
+    padding-bottom: 0px;
+    gap: 30px;
+    width: 100%;
+    height: 800px;
+  }
+  .sports-content nav li {
+    font-size: 0.9rem;
+  }
+
+  .sports-content .sport-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .sports-content p {
+    font-size: 0.9rem;
+    font-weight: 550;
+  }
+  .sports-content .sport-info .sport-icons {
+    gap: 10px;
+  }
+
+  .sports-content .sport-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .plans-content .plans-content2 {
+    padding: 20px 0px;
+  }
+  .plans-content .plans-content3 div {
+    padding: 20px 0;
+    gap: 25px;
+  }
+  .plans-content3 div p.plan-title {
+    font-size: 0.8rem;
+  }
+  .plans-content3 div img {
+    width: 18px;
+    height: auto;
+  }
+  .plans-content3 div span.midline {
+    display: none;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px;
+  }
+  footer .links .link-class .link-class-head {
+    padding: 30px 0px;
+    border-bottom: 1px solid #b6c2c5;
+  }
+  footer .links .link-class:last-child .link-class-head {
+    border-bottom: none;
+  }
+  footer .links .link-class p.link-class-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  footer .links .link-class p.link-class-head img {
+    display: inline-block;
+    width: 0.8rem;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  footer .links .link-class .link-class-item {
+    width: 100%;
+    display: none;
+  }
+  footer .links .link-class:first-child .link-class-item {
+    width: 100%;
+  }
+  footer .links .link-class p.link-class-head.active ~ .link-class-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .links .link-class:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head-content2 {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .head-content2 .bundle1,
+  .head-content2 .bundle2 {
+    width: 100%;
+    min-width: 140px;
+    max-width: 160px;
+    padding: 12px 2px;
+  }
+
+  .head-content2 img {
+    width: 130px;
+  }
+
+  .head-content2 img.bundle-img2 {
+    width: 160px;
+  }
+
+  .head-content2 p.pricing {
+    font-size: 1rem;
+  }
+
+  .head-content2 button {
+    padding: 8px 0px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .trial-content h1 {
+    font-size: 1.8rem;
+  }
+}
