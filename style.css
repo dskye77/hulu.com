@@ -1060,6 +1060,7 @@ footer .links-other .terms p {
   }
   .head-content1 {
     padding: 15px 0px;
+    gap: 0px;
   }
   .head-content3 {
     flex-direction: column;
